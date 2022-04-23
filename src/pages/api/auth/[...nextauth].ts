@@ -4,7 +4,6 @@ import { query as q } from "faunadb"
 import { fauna } from "../../../services/fauna"
 
 export default NextAuth({
-  // Configure one or more authentication providers
   providers: [
     GithubProvider({
       clientId: process.env.GITHUB_ID,
@@ -15,7 +14,6 @@ export default NextAuth({
         }
       }
     }),
-    // ...add more providers here
   ],
   callbacks: {
     async signIn({ user, account, profile }) {
@@ -30,12 +28,10 @@ export default NextAuth({
                   q.Casefold(user.email)
                 )
               )
-            ), //end condition
-            //if true
+            ), //end condition - if true
             q.Create(
               q.Collection('users'), { data: { email } }
-            ),
-            //if false
+            ), //if false
             q.Get(
               q.Match(
                 q.Index('user_by_email'),
