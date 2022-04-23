@@ -9,7 +9,7 @@ export default NextAuth({
       clientSecret: process.env.GITHUB_SECRET,
       authorization:{
           params:{
-              scope:'read:user'
+              scope:'read:user' //+1 params no scope 'read:user, read:repo, etc...'
           }
       }
     }),
