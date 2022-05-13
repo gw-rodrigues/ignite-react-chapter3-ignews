@@ -1,34 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Header](https://user-images.githubusercontent.com/92688864/168326961-c05da869-69f3-496c-ab4a-7d2ebad30b52.png)
 
-## Getting Started
+![Demonstration](https://user-images.githubusercontent.com/92688864/168326971-9a041e17-efd8-4cf3-a0f0-a0ee34398f26.png)
 
-First, run the development server:
+![Roadmap](https://gist.githubusercontent.com/gw-rodrigues/d0ea04e57502976391b0f71b9a06d918/raw/eba1ec06e6bf00f792d9f1f4ca4ce7df1dab9673/Roadmap.svg)
 
-```bash
+![More...](https://gist.githubusercontent.com/gw-rodrigues/d0ea04e57502976391b0f71b9a06d918/raw/eba1ec06e6bf00f792d9f1f4ca4ce7df1dab9673/STEP.svg)
+<p>In this module we will understand how Next.js transforms the way we develop front-end applications and we will discover important concepts such as SSR and SSG.</p>
+
+![More...](https://gist.githubusercontent.com/gw-rodrigues/d0ea04e57502976391b0f71b9a06d918/raw/eba1ec06e6bf00f792d9f1f4ca4ce7df1dab9673/STEP-1.svg)
+<p>During this module we will understand how the front-end has transformed in recent years with the possibility of having back-end (serverless) functions running in a front-end environment.</p>
+
+![More...](https://gist.githubusercontent.com/gw-rodrigues/d0ea04e57502976391b0f71b9a06d918/raw/eba1ec06e6bf00f792d9f1f4ca4ce7df1dab9673/STEP-2.svg)
+<p>It is very common to develop front-end applications that are not connected to a single back-end nowadays, so here we will understand the concept of JAMStack and how to connect our front-end with a CMS.</p>
+
+![Instalation](https://gist.githubusercontent.com/gw-rodrigues/d0ea04e57502976391b0f71b9a06d918/raw/eba1ec06e6bf00f792d9f1f4ca4ce7df1dab9673/Instalation.svg)
+
+You can use a tool like [degit](https://github.com/Rich-Harris/degit) to clone my projects for your directory.
+
+```sh
+npx degit user/repository new-project-folder-name
+cd new-project-folder-name
+
+npm install
 npm run dev
-# or
+#OR
 yarn dev
 ```
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+![More...](https://gist.githubusercontent.com/gw-rodrigues/d0ea04e57502976391b0f71b9a06d918/raw/eba1ec06e6bf00f792d9f1f4ca4ce7df1dab9673/More....svg)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](./LICENSE)
+![GitHub Repo stars](https://img.shields.io/github/stars/gw-rodrigues/nlw-8?style=for-the-badge)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/gw-rodrigues/nlw-8?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/gw-rodrigues/nlw-8?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/gw-rodrigues/nlw-8?style=for-the-badge)
