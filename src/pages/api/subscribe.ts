@@ -19,7 +19,7 @@ export default async function Subscribe(
       billing_address_collection: "required", //ou Auto config no stripe
       line_items: [
         {
-          price: "price_secrety_key",
+          price: process.env.STRIPE_PRICE_KEY,
           quantity: 1,
         },
       ],
@@ -28,7 +28,7 @@ export default async function Subscribe(
       success_url: process.env.STRIPE_SUCCESS_URL,
       cancel_url: process.env.STRIPE_CANCEL_URL,
     });
-    return res.status(200).json({ sessionID: stripeCheckoutSession.id }); //com id vamos/pesquisamos depois user/converte url
+    return res.status(200).json({ sessionId: stripeCheckoutSession.id }); //com id vamos/pesquisamos depois user/converte url
   }else{
       res.setHeader('Allow','POST')
       res.status(405).end('Method not allowed')
