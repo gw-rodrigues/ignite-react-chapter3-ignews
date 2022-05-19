@@ -3,7 +3,13 @@
     "posts": {
       "content": {
         "config": {
-          "patternType": "PARAGRAPH",
+          "patternType": "STORY",
+          "blocks": 1
+        }
+      },
+      "title": {
+        "config": {
+          "patternType": "HEADING",
           "blocks": 1
         }
       }
