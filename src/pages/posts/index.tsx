@@ -2,18 +2,19 @@ import { GetStaticProps } from "next";
 import Head from "next/head";
 import { RichText } from "prismic-dom";
 import { getPrismicClient } from "../../services/prismic";
+import Link from "next/link";
 import styles from "./styles.module.scss";
 
 type Post = {
-    slug: string;
-    title: string;
-    excerpt: string;
-    updatedAt: string;
-  };
-  
-  interface PostsProps {
-    posts: Post[];
-  }
+  slug: string;
+  title: string;
+  excerpt: string;
+  updatedAt: string;
+};
+
+interface PostsProps {
+  posts: Post[];
+}
 
 export default function Posts({ posts }: PostsProps) {
   return (
@@ -23,17 +24,17 @@ export default function Posts({ posts }: PostsProps) {
       </Head>
       <main className={styles.container}>
         <div className={styles.posts}>
-          {
-              posts.map((post)=>{
-                return (
-                    <a key={post.slug} href="#">
-                        <time>{post.updatedAt}</time>
-                        <strong>{post.title}</strong>
-                        <p>{post.excerpt}</p>
-                    </a>
-                )
-              })
-          }
+          {posts.map((post) => {
+            return (
+              <Link key={post.slug} href={`/posts/${post.slug}`}>
+                <a>
+                  <time>{post.updatedAt}</time>
+                  <strong>{post.title}</strong>
+                  <p>{post.excerpt}</p>
+                </a>
+              </Link>
+            );
+          })}
         </div>
       </main>
     </>
@@ -53,7 +54,7 @@ export const getStaticProps: GetStaticProps = async () => {
       slug: post.uid,
       title: RichText.asText(post.data.title),
       excerpt:
-        post.data.content.find((content:any) => content.type === "paragraph")
+        post.data.content.find((content: any) => content.type === "paragraph")
           ?.text ?? "",
       updatedAt: new Date(post.last_publication_date).toLocaleDateString(
         "pt-BR",
@@ -69,6 +70,6 @@ export const getStaticProps: GetStaticProps = async () => {
   //console.log(JSON.stringify(pages, null, 2));
 
   return {
-    props: { posts }
+    props: { posts },
   };
 };
