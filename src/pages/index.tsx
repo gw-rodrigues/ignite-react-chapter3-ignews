@@ -36,7 +36,7 @@ export const getStaticProps: GetStaticProps = async () => {
     { expand: ['product'] }
   )
 
-  console.log('STRIPE_KEY: ',process.env.STRIPE_API_KEY)
+  //console.log('STRIPE_KEY: ',process.env.STRIPE_API_KEY)
 
   const product = {
     priceId: price.id,
