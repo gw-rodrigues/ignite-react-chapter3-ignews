@@ -9,7 +9,7 @@
  * vamos usar/fazer um "mock" - uma imitação para quando o componente Jest executar, retorna um valor, imposto. (Libs fictícia)
  */
 
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { ActiveLink } from ".";
 
 jest.mock("next/router", () => {
@@ -39,7 +39,9 @@ describe("ActiveLink component", () => {
     /**
      * importamos o componente ser testado: ex: <ActiveLink>
      */
-    const { getByText } = render(
+
+    // const { getByText } = render(
+    render(
       <ActiveLink href="/" activeClassName="active">
         <a>Home</a>
       </ActiveLink>
@@ -54,13 +56,14 @@ describe("ActiveLink component", () => {
      * O que eu espero que aconteça - expect()
      *  - complementa várias params, funções
      *  -- getByText() - !!! Nome do const que recebe o render()*
+     *  -- Para nao ficarmos desestruturando o "render" importamos o "screen" e usamos antes do getByText() (assim removemos const { getByText })
      *  -- toBeInTheDocument()
      */
-    expect(getByText("Home")).toBeInTheDocument();
+    expect(screen.getByText("Home")).toBeInTheDocument();
   });
 
   it("adds active class if its currently active link", () => {
-    const { getByText } = render(
+    render(
       <ActiveLink href="/" activeClassName="active">
         <a>Home</a>
       </ActiveLink>
@@ -68,6 +71,6 @@ describe("ActiveLink component", () => {
     /**
      * usamos a função - toHaveClass() verificar existe tipo/nome class css
      */
-    expect(getByText("Home")).toHaveClass("active");
+    expect(screen.getByText("Home")).toHaveClass("active");
   });
 });
