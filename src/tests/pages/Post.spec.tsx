@@ -14,7 +14,7 @@ const post = {
   updatedAt: "2022-09-16",
 };
 
-describe("Post page", () => {
+describe("Posts page", () => {
   /** */
   it("renders correctly", () => {
     render(<Post post={post} />);
