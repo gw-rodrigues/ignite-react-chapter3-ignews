@@ -15,6 +15,7 @@ export default NextAuth({
       },
     }),
   ],
+  secret: process.env.NEXTAUTH_SECRET,
   callbacks: {
     async session({ session }) {
       try {
@@ -39,7 +40,7 @@ export default NextAuth({
         );
         return { ...session, activeSubscription: userActiveSubscription };
       } catch {
-        return { ...session, activeSubscription: null }; 
+        return { ...session, activeSubscription: null };
       }
     },
     async signIn({ user, account, profile }) {
