@@ -73,4 +73,39 @@ describe("Async component", () => {
  *  Mas ele mostra mais propriedades disponíveis para validar.
  *
  *  Também regista todos os eventos, teclado e mouse realizados durante essa simulação de testes.
+ *
+ *
+ *
+ *  !!! Coverage report - podemos saber quais teste estão sendo feitos e quais estão cobrindo.
+ *   -> jest coverage
+ *   -> jest configuring
+ *
+ *      https://jestjs.io/docs/configuration#collectcoverage-boolean
+ *
+ *  adicionar no jest.config.js
+ *
+ * podemos adicionar os arquivos e ignorar os arquivos da nossa app.
+ */
+
+//  collectCoverage: true,
+//  collectCoverageFrom: [
+//      'src/**/*.tsx',
+//      '!src/**/*.spec.tsx',
+//      '!src/**/_app.tsx',
+//      '!src/**/_document.tsx',
+//  ],
+//  coverageReporters:['lcov','json']
+
+/**
+ * executamos agora o yarn test com coverage
+ * -> yarn test --coverage
+ *
+ * Criara pasta coverage, open in finder, > icov-report > index.html
+ *
+ * podemos ver um relatório da nossa aplicação
+ * assim podemos saber se estamos a gerar testes suficientes para a nossa aplicação!
+ *
+ * -> a selecionar o testes, podemos ver as linhas que podiam ser testadas.
+ *
+ *
  */
